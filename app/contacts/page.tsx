@@ -1,4 +1,4 @@
-import CreateButton from '@/components/button';
+import { CreateButton } from '@/components/button';
 import ContactTable from '@/components/contact-table';
 import Search from '@/components/search';
 import React from 'react';
