@@ -1,5 +1,6 @@
 'use client';
 
+import { deleteContact } from '@/lib/actions';
 import clsx from 'clsx';
 import Link from 'next/link';
 import React from 'react';
@@ -29,11 +30,15 @@ export const EditButton = ({ id }: { id: string }) => {
   );
 };
 
-export const DeleteButton = () => {
+export const DeleteButton = ({ id }: { id: string }) => {
+  const deleteContactWithId = deleteContact.bind(null, id);
+
   return (
-    <button className="rounded-sm border p-1 hover:bg-gray-100">
-      <IoTrashOutline size={20} />
-    </button>
+    <form action={deleteContactWithId}>
+      <button className="rounded-sm border p-1 hover:bg-gray-100">
+        <IoTrashOutline size={20} />
+      </button>
+    </form>
   );
 };
 
