@@ -27,7 +27,7 @@ const ContactTable = async () => {
               {formatDate(contact?.createAt.toString())}
             </td>
             <td className="py-3 flex justify-center gap-1">
-              <EditButton />
+              <EditButton id={contact?.id} />
               <DeleteButton />
             </td>
           </tr>
