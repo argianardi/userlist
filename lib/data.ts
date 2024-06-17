@@ -7,6 +7,9 @@ export const getContacts = async (query: string, currentPage: number) => {
   const offset = (currentPage - 1) * ITEMS_PER_PAGE;
 
   try {
+    // Promise delay digunakan untuk menunda proses fetch data selama 3 detik
+    // await new Promise((resolve) => setTimeout(resolve, 3000));
+
     const contacts = await prisma?.contact.findMany({
       where: {
         OR: [
