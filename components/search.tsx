@@ -14,6 +14,9 @@ const Search = () => {
     // Buat objek URLSearchParams dari objek searchParams
     const params = new URLSearchParams(searchParams);
 
+    // Atur parameter 'page' menjadi '1' saat user  searching
+    params.set('page', '1');
+
     // Jika input pencarian tidak kosong
     if (searchInput) {
       // Atur parameter 'query' dengan nilai input pencarian
